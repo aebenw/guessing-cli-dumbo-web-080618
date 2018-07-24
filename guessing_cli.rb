@@ -10,14 +10,14 @@ def run_guessing_game
   number = rand(1..6)
   until command.downcase == "exit"
     command = gets.chomp 
-    if command.to_i == number
+    if command.downcase == "exit"
+      exit_gen
+    elsif command.to_i == number
       puts "You guessed the correct number!"
       command = gets.chomp
     elsif command.to_i != number
       puts "The computer guessed 5."
       command = gets.chomp
-    elsif command.downcase == "exit"
-      exit_gen
     end 
   end
 end
