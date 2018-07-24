@@ -16,7 +16,7 @@ def run_guessing_game
     elsif command != number
       puts "The computer guessed 5."
       command = gets.chomp
-    elsif command.downcase == exit
+    elsif command.downcase == "exit"
       exit_gen
     end 
   end
