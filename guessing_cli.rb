@@ -13,7 +13,7 @@ def run_guessing_game
     if command.to_i == number
       puts "You guessed the correct number!"
       command = gets.chomp
-    elsif command != number
+    elsif command.to_i != number
       puts "The computer guessed 5."
       command = gets.chomp
     elsif command.downcase == "exit"
