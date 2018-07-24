@@ -10,7 +10,7 @@ def run_guessing_game
   number = rand(1..6)
   until command.downcase == "exit"
     command = gets.chomp 
-    if command.to_i = number
+    if command.to_i == number
       puts "You guessed the correct number!"
       command = gets.chomp
     elsif command != number
